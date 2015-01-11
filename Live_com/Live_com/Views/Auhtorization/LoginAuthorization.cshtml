@@ -1,0 +1,31 @@
+﻿@model Live_com.Models.User
+@{
+    ViewBag.Title = "LoginAuthorization";
+}
+<head>
+    <h2>LoginAuthorization</h2>
+</head>
+<body>
+    <div>
+        @using (Ajax.BeginForm("Accepted", "Auhtorization",
+        new AjaxOptions { UpdateTargetId = "divInterestDeatils" }))
+        {
+            <div id="divInterestDeatils"></div>
+            <ol>
+                <li>
+                Разрешить приложению
+                доступ к данным пользователя? 
+               </li>
+            </ol>
+            <button>Разрешить</button>
+        }
+        </br>
+        </br>
+        @using (Ajax.BeginForm("DontAccepted", "Auhtorization",
+        new AjaxOptions { UpdateTargetId = "divInterestDeatils" }))
+        {
+            <button>Запретить</button>
+        }
+    </div>
+</body>
+</html>

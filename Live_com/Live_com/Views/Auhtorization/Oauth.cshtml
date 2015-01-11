@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Oauth</title>
+</head>
+<body>
+    </br>
+    </br>
+    <div>
+        @using (Ajax.BeginForm("LoginAuthorization", "Auhtorization",
+        new AjaxOptions { UpdateTargetId = "divInterestDeatils" }))
+        {
+            <div id="divInterestDeatils"></div>
+            <ol>
+                <li>
+                    @Html.Label("Login")
+                    @Html.TextBox("txtAmount")
+                </li>
+                <li>
+                    @Html.Label("Password")
+                    @Html.Password("txtRate")
+                </li>
+            </ol>
+            <button>Sign In</button>
+        } 
+        </div>
+</body>
+</html>

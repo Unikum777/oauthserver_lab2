@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "CreateUser";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Регистрация новго пользователя</title>
+</head>
+<body>
+    <div>
+        </br>
+        </br>
+        </br>
+        </div>
+    <div>
+        @using (Ajax.BeginForm("CreateNewUser", "Auhtorization",
+        new AjaxOptions { UpdateTargetId = "divInterestDeatils" }))
+        {
+            <div id="divInterestDeatils"></div>
+            <ol>
+                <li>
+                    @Html.Label("Name (login)")
+                    @Html.TextBox("txtLogin")
+                </li>
+                <li>
+                    @Html.Label("Password")
+                    @Html.Password("txtPassword")
+                </li>
+                <li>
+                    @Html.Label("E-mail")
+                    @Html.TextBox("txtEmail")
+                </li>
+                <li>
+                    @Html.Label("Phone")
+                    @Html.TextBox("txtPhone")
+                </li>
+            </ol>
+            <button>Создать</button>
+        }
+    </div>
+</body>
+</html>

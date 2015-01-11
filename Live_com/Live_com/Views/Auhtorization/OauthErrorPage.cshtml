@@ -1,0 +1,18 @@
+﻿@model System.Exception
+@{
+    ViewBag.Title = "OauthErrorPage";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Oauth Error</title>
+    <h2>Oauth Error</h2>
+</head>
+<body>
+        @Model.Message<br>
+        @Model.Data<br>
+</body>
+</html>
+
